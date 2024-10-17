@@ -8,10 +8,14 @@ class CustomUiExample1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CameraAwesomeBuilder.custom(
+        progressIndicator: Container(
+          color: Colors.black,
+        ),
         builder: (cameraState, preview) {
           return cameraState.when(
-            onPreparingCamera: (state) =>
-                const Center(child: CircularProgressIndicator()),
+            onPreparingCamera: (state) => Container(
+              color: Colors.black,
+            ),
             onPhotoMode: (state) => TakePhotoUI(state),
             onVideoMode: (state) => RecordVideoUI(state, recording: false),
             onVideoRecordingMode: (state) =>
