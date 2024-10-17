@@ -1,3 +1,8 @@
+# 2.1.1
+
+ - Feature: Implemented smooth fade transition in AnimatedSwitcher for improved loading and content state switching.
+ - Enhancement: Added transitionBuilder to customize animations within AnimatedSwitcher.
+
 # 2.1.O
 - Update for flutter 3.24.0
 - Update dependencies (Thank you @tonistayhungrystayfoolish / @bytemaster / @millerf for the PR) 
