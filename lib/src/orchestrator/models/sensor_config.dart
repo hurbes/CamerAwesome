@@ -28,9 +28,6 @@ class SensorConfig {
   // /// choose your photo size from the [selectDefaultSize] method
   // late Stream<Size?> previewSize;
 
-  /// set brightness correction manually range [0,1] (optional)
-  Stream<double>? brightness$;
-
   late BehaviorSubject<double> _zoomController;
 
   /// Use this stream to debounce brightness events
@@ -171,6 +168,8 @@ class SensorConfig {
 
   /// Returns the current brightness without stream
   double? get brightness => _brightnessController.valueOrNull;
+
+  Stream<double> get brightness$ => _brightnessController.stream;
 
   void dispose() {
     _brightnessSubscription?.cancel();
