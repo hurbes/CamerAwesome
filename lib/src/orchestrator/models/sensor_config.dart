@@ -170,7 +170,7 @@ class SensorConfig {
   }
 
   /// Returns the current brightness without stream
-  double get brightness => _brightnessController.value;
+  double? get brightness => _brightnessController.valueOrNull;
 
   void dispose() {
     _brightnessSubscription?.cancel();
